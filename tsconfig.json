@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",                     // CommonJS module system (standard for Node.js).
+    "declaration": true,                      // Generates `.d.ts` declaration files for type checking.
+    "removeComments": true,                   // Strips comments in compiled code for cleaner output.
+    "emitDecoratorMetadata": true,            // Enables metadata reflection, required for NestJS.
+    "experimentalDecorators": true,           // Enables decorator support, essential for NestJS.
+    "allowSyntheticDefaultImports": true,     // Allows default imports from modules without defaults.
+    "esModuleInterop": true,                  // Provides compatibility with CommonJS modules.
+    "target": "ES2021",                       // Use latest syntax features supported by Node.js.
+    "moduleResolution": "node",               // Ensures Node.js-style module resolution.
+    "sourceMap": true,                        // Enables sourcemaps for easier debugging.
+    "outDir": "./dist",                       // Compiled output directory.
+    "baseUrl": "./",                          // Sets the base directory for imports.
+    "incremental": true,                      // Speeds up incremental compilations.
+    "skipLibCheck": true,                     // Skips type checks on library files for faster builds.
+
+    // Strict mode settings for enhanced type safety:
+    "strict": true,                           // Enables all strict type-checking options.
+    "strictNullChecks": true,                 // Requires null checks, avoiding unexpected errors.
+    "noImplicitAny": true,                    // Prevents using `any` implicitly, encouraging better type definitions.
+    "strictBindCallApply": true,              // Type-checks parameters for `bind`, `call`, and `apply`.
+    "forceConsistentCasingInFileNames": true, // Enforces consistent file name casing.
+    "noFallthroughCasesInSwitch": true,       // Flags fallthrough cases in `switch` statements.
+
+    // Additional helpful options for production stability:
+    "noUnusedLocals": true,                   // Flags unused local variables for cleaner code.
+    "noUnusedParameters": true,               // Flags unused function parameters.
+    "noImplicitReturns": true,                // Flags functions missing explicit `return` statements.
+    "noImplicitThis": true                    // Ensures `this` is used only where explicitly defined.
+  },
+  "include": ["src/**/*"],                     // Include all files in `src` directory.
+  "exclude": ["node_modules", "dist"]          // Exclude compiled output and dependency directories.
+}
